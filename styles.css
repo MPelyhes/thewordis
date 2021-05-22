@@ -3,6 +3,109 @@
   --darkest: rgba(35, 21, 64, 1); 
   --medium: rgba(81, 78, 166, 1);
   --light: rgba(119, 125, 242, 1);
-  --lighest: rgba(126, 143, 242, 1);
+  --lighest: #7e8ff2;
 }
 
+body{
+  line-height: 1.4;
+  margin: 0;
+  width: 100%;
+  background-color: rgba(148, 242, 242, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+form{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+textarea{
+  width: 100%;
+  color: var(--darkest);
+  margin-top: 3rem;
+  font-weight: 400;
+  font-size: 1rem;
+  height: 70%;
+  border: 10px solid white;
+  border-radius: 5px;
+  resize: none;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+button {
+  padding: 0;
+  font: inherit;
+  font-weight: 700;
+  color: var(--medium);
+  background-color: transparent;
+  cursor: pointer;
+  margin-top: 1rem;
+  border: 3px solid var(--medium);
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  transition: box-shadow 0.5s ease;
+  width: 8rem;
+  align-self: center;
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  transition: all .3s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--dark);
+  color:#bff7f7;
+  border-color: var(--dark);
+  transform: scale(1.05); 
+}
+
+.stats{
+  display: flex;
+  width: 60%;
+  color: var(--dark);
+  justify-content: space-around;
+  border-top: 2px solid var(--darkest);
+  margin-top: 2rem;
+  justify-self: center;
+}
+
+.words-container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+}
+.words{
+  border: 2px solid var(--light);
+  padding: 6px 8px;
+  margin-right: 10px;
+  border-radius: 3px;
+  color: var(--dark);
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  transition: all .3s ease-in-out;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  margin: 1rem;
+}
+
+.words:hover{
+  cursor: pointer;
+  /* padding: 8px 10px; */
+}
+
+.extras{
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  margin: 0;
+}
+
+.words:hover .extras {
+  animation: ease-in 1s;
+  visibility: visible;
+  height: fit-content;
+  width: fit-content;
+}

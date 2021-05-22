@@ -70,15 +70,22 @@ submitBtn.addEventListener('click', (e)=> {
 const createUI = (str) => {
   const words = wordMap(str);
   // Add container with all words and occurences to the ui
-  const statsContainer = document.createElement('div');
+  const wordsContainer = document.createElement('div');
+  wordsContainer.classList.add('words-container')
 
   for(let el in words){
-    const word = document.createElement('p')
-    word.innerText = `${el} (count: ${words[el]["count"]}, length: ${words[el]["length"]})`
-    statsContainer.appendChild(word);
+    const word = document.createElement('div');
+    word.classList.add('words');
+    word.innerText = `${el}`
+    const wordExtras = document.createElement('p')
+    wordExtras.innerText = `: (count: ${words[el]["count"]}, length: ${words[el]["length"]})`
+    wordExtras.classList.add('extras');
+    word.appendChild(wordExtras);
+    wordsContainer.appendChild(word);
   }
 
   const wordStats = document.createElement('div');
+  wordStats.classList.add('stats');
   const totalChars = document.createElement('p');
   totalChars.innerText = `Total Characters: ${text.value.length}`;
   const allWords = document.createElement('p');
@@ -90,5 +97,5 @@ const createUI = (str) => {
 
   wordStats.append(totalChars, allWords, unique, avgLength);
 
-  body.append(wordStats, statsContainer);
+  body.append(wordStats, wordsContainer);
 }
