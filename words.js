@@ -5,7 +5,7 @@ const removePunctuation = (str) => {
 }
 
 //Function takes in a string and returns an obj conatining the unique words, word lengths, and number of occurences
-const wordMap = (str) => {
+ const wordMap = (str) => {
   //An object that will hold every unique word from a given string, with the word length and number of occurences
   const wordObj = {};
   //Remove all punctuation from a string, turn all the characeters lowecase, and then turn the string into an array of strings
@@ -46,3 +46,5 @@ const avgWordLength = (str) => {
 }
 
 console.log(avgWordLength("A Republican Wyoming state senator who's running against US Rep. Liz Cheney for her House seat told a local newspaper he impregnated a 14-year-old girl when he was 18-years-old after he referenced the incident during a Facebook Live stream."));
+
+// export {wordMap}
