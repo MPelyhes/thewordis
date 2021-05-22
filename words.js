@@ -29,10 +29,20 @@ const wordCount = (obj) =>{
   return count;
 }
 
+//returns the total length of all strings combined (no spaces)
+const totalLength = (obj) => {
+  let result = 0;
+  for(let key in obj){
+    result += (obj[key]["count"] * obj[key]["length"])
+  }
+  return result;
+}
+
 const avgWordLength = (str) => {
   const words = wordMap(str);
   let count = wordCount(words);
-  return count;
+  let length  = totalLength(words);
+  return length/count;
 }
 
-console.log(avgWordLength("Hello, my name is is is is  Mr. Pelyhes, and I don't am and my here to to name hello ! Here to Talk*&%$#)$_%#@{}. ?/ What ~ do you think of That?"));
+console.log(avgWordLength("A Republican Wyoming state senator who's running against US Rep. Liz Cheney for her House seat told a local newspaper he impregnated a 14-year-old girl when he was 18-years-old after he referenced the incident during a Facebook Live stream."));
