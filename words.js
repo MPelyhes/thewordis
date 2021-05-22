@@ -21,4 +21,18 @@ const wordMap = (str) => {
   return wordObj;
 }
 
-console.log(wordMap("Hello, my name is is is is  Mr. Pelyhes, and I don't am and my here to to name hello ! Here to Talk*&%$#)$_%#@{}. ?/ What ~ do you think of That?"));
+const wordCount = (obj) =>{
+  let count = 0;
+  for(let key in obj){
+    count += obj[key]["count"];
+  }
+  return count;
+}
+
+const avgWordLength = (str) => {
+  const words = wordMap(str);
+  let count = wordCount(words);
+  return count;
+}
+
+console.log(avgWordLength("Hello, my name is is is is  Mr. Pelyhes, and I don't am and my here to to name hello ! Here to Talk*&%$#)$_%#@{}. ?/ What ~ do you think of That?"));
