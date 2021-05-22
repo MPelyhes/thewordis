@@ -42,7 +42,7 @@ const avgWordLength = (str) => {
   const words = wordMap(str);
   let count = wordCount(words);
   let length  = totalLength(words);
-  return length/count;
+  return (length/count).toFixed(2);
 }
 
 console.log(avgWordLength("A Republican Wyoming state senator who's running against US Rep. Liz Cheney for her House seat told a local newspaper he impregnated a 14-year-old girl when he was 18-years-old after he referenced the incident during a Facebook Live stream."));
