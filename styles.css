@@ -84,11 +84,12 @@ button:hover {
   border-radius: 3px;
   color: var(--dark);
   box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
-  transition: all .3s ease-in-out;
+  transition: all 1s ease-in-out;
   width: fit-content;
   height: fit-content;
   display: flex;
   margin: 1rem;
+  position: relative;
 }
 
 .words:hover{
@@ -96,16 +97,42 @@ button:hover {
   /* padding: 8px 10px; */
 }
 
-.extras{
+.words .extras{
   visibility: hidden;
-  height: 0;
-  width: 0;
-  margin: 0;
+  
+  margin: 0; 
+  width: 100px;
+  background-color:var(--dark);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+   /* Position the tooltip */
+   position: absolute;
+   z-index: 1;
+   border: 2px solid var(--lighest);
+   padding: 5px;
+   text-align: center;
+   color: white;
+   bottom: 50px;
+   box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
 }
 
 .words:hover .extras {
   animation: ease-in 1s;
   visibility: visible;
-  height: fit-content;
-  width: fit-content;
+  max-height: 76px;
+}
+
+
+.bubble:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid var(--dark);
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--dark);
+  border-bottom: 10px solid transparent;
+  left: 19px;
+  bottom: -19px;
 }

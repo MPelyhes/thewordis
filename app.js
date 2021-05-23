@@ -77,9 +77,9 @@ const createUI = (str) => {
     const word = document.createElement('div');
     word.classList.add('words');
     word.innerText = `${el}`
-    const wordExtras = document.createElement('p')
-    wordExtras.innerText = `: (count: ${words[el]["count"]}, length: ${words[el]["length"]})`
-    wordExtras.classList.add('extras');
+    const wordExtras = document.createElement('span')
+    wordExtras.innerText = `count: ${words[el]["count"]} length: ${words[el]["length"]}`
+    wordExtras.classList.add('extras', 'bubble');
     word.appendChild(wordExtras);
     wordsContainer.appendChild(word);
   }
