@@ -1,6 +1,6 @@
 :root {
-  --dark: rgba(48, 29, 89, 1);
-  --darkest: rgba(35, 21, 64, 1); 
+  --dark: #301d59;
+  --darkest: #231540; 
   --medium: rgba(81, 78, 166, 1);
   --light: rgba(119, 125, 242, 1);
   --lighest: #7e8ff2;
@@ -15,6 +15,9 @@ body{
   flex-direction: column;
   align-items: center;
   font-family: 'Roboto Condensed', sans-serif;
+
+  /* Pattern*/
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23301d59' fill-opacity='0.3' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 form{
@@ -42,7 +45,7 @@ button {
   font: inherit;
   font-weight: 700;
   color: var(--medium);
-  background-color: transparent;
+  background-color: rgba(148, 242, 242, 0.4);
   cursor: pointer;
   margin-top: 1rem;
   border: 3px solid var(--medium);
@@ -67,7 +70,7 @@ button:hover {
   width: 60%;
   color: var(--dark);
   justify-content: space-around;
-  border-top: 2px solid var(--darkest);
+  border-top: 2px solid var(--medium);
   margin-top: 2rem;
   justify-self: center;
 }
@@ -78,6 +81,7 @@ button:hover {
   width: 60%;
 }
 .words{
+  background-color: rgba(148, 242, 242, 0.4);
   border: 2px solid var(--light);
   padding: 6px 8px;
   margin-right: 10px;
@@ -137,3 +141,4 @@ button:hover {
   left: 19px;
   bottom: -19px;
 }
+
