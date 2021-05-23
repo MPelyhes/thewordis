@@ -1,5 +1,5 @@
 //Main funciton file which will be used to bring all the app logic together
-// import {wordMap} from "./words";
+
 //function to remove all punctuation from a string, except apostrophes
 const removePunctuation = (str) => {
   const regex = /[!"#$%&()*+,./:;<=>?@[\]^_`{|}~]/g;
@@ -54,8 +54,6 @@ const avgWordLength = (obj) => {
   return (length/count).toFixed(2);
 }
 
-console.log(avgWordLength("A Republican Wyoming state senator who's running against US Rep. Liz Cheney for her House seat told a local newspaper he impregnated a 14-year-old girl when he was 18-years-old after he referenced the incident during a Facebook Live stream."));
-
 ////// UI Manipulation/Creation ///////////
 
 const submitBtn = document.querySelector('#submit-button');
@@ -65,6 +63,8 @@ const body = document.querySelector('body');
 
 submitBtn.addEventListener('click', (e)=> {
   e.preventDefault();
+  //Hide the submit button after it has been clicked and show the clear all button
+  //When the clear all button is clicked it refreshes the page automatically
   submitBtn.classList.toggle('hidden');
   clearBtn.classList.toggle('hidden');
   createUI(removePunctuation(text.value));
