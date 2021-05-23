@@ -40,6 +40,11 @@ textarea{
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
+.hidden{
+  /*Only to be used when the element should not be accessible to screen readers!!*/
+  display: none;
+}
+
 button {
   padding: 0;
   font: inherit;
@@ -59,10 +64,30 @@ button {
 }
 
 button:hover {
-  background-color: var(--dark);
+  background-color: rgba(48, 29, 89, 0.651);
   color:#bff7f7;
   border-color: var(--dark);
   transform: scale(1.05); 
+}
+
+.hidden{
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  padding: 0;
+  color: transparent;
+}
+
+.clear-button{
+  border: 3px solid rgba(255, 0, 0, 0.651);
+  color: rgba(255, 0, 0, 0.651);
+  align-self: start;
+}
+
+.clear-button:hover{
+  background-color: rgba(255, 0, 0, 0.651);
+  color: white;
+  border-color: rgba(255, 0, 0, 0.651);
 }
 
 .stats{
