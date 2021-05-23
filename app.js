@@ -2,7 +2,7 @@
 // import {wordMap} from "./words";
 //function to remove all punctuation from a string, except apostrophes
 const removePunctuation = (str) => {
-  const regex = /[!"#$%&()*+,-./:;<=>?@[\]^_`{|}~]/g;
+  const regex = /[!"#$%&()*+,./:;<=>?@[\]^_`{|}~]/g;
   return str.replace(regex, "");
 }
 
@@ -59,11 +59,14 @@ console.log(avgWordLength("A Republican Wyoming state senator who's running agai
 ////// UI Manipulation/Creation ///////////
 
 const submitBtn = document.querySelector('#submit-button');
+const clearBtn = document.querySelector('#clear-button');
 const text = document.querySelector('#text')
 const body = document.querySelector('body');
 
 submitBtn.addEventListener('click', (e)=> {
   e.preventDefault();
+  submitBtn.classList.toggle('hidden');
+  clearBtn.classList.toggle('hidden');
   createUI(removePunctuation(text.value));
 })
 

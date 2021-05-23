@@ -20,6 +20,16 @@ body{
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23301d59' fill-opacity='0.3' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
+h1{
+  align-self: start;
+  margin: 1rem 1rem;
+  background-color: rgba(148, 242, 242, 0.4);
+  border: 3px solid rgb(255, 255, 255);
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  color: var(--medium);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
 form{
   width: 60%;
   display: flex;
@@ -29,7 +39,7 @@ form{
 textarea{
   width: 100%;
   color: var(--darkest);
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   font-weight: 400;
   font-size: 1rem;
   height: 70%;
