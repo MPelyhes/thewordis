@@ -76,10 +76,14 @@ const createUI = (str) => {
   for(let el in words){
     const word = document.createElement('div');
     word.classList.add('words');
-    word.innerText = `${el}`
-    const wordExtras = document.createElement('span')
-    wordExtras.innerText = `count: ${words[el]["count"]} length: ${words[el]["length"]}`
+    word.innerText = `${el}`;
+    const wordExtras = document.createElement('div'); 
+    const countSpan = document.createElement('span');
+    countSpan.innerText = `count: ${words[el]["count"]}`
+    const lengthSpan = document.createElement('span');
+    lengthSpan.innerText = `length: ${words[el]["length"]}`
     wordExtras.classList.add('extras', 'bubble');
+    wordExtras.append(countSpan, lengthSpan);
     word.appendChild(wordExtras);
     wordsContainer.appendChild(word);
   }
