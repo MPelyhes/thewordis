@@ -140,7 +140,7 @@ button:hover {
   visibility: hidden;
   margin: 0; 
   width: 100px;
-  background-color:rgba(48, 29, 89, 0.65);
+  background-color:rgba(48, 29, 89, 0.9);
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
@@ -169,9 +169,9 @@ button:hover {
   width: 0px;
   height: 0px;
   position: absolute;
-  border-left: 10px solid var(--dark);
+  border-left: 10px solid rgba(48, 29, 89, 0.9);
   border-right: 10px solid transparent;
-  border-top: 10px solid var(--dark);
+  border-top: 10px solid rgba(48, 29, 89, 0.9);
   border-bottom: 10px solid transparent;
   left: 19px;
   bottom: -19px;
