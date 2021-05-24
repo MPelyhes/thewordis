@@ -1,5 +1,5 @@
 :root {
-  --dark: #301d59;
+  --dark: rgb(48, 29, 89);
   --darkest: #231540; 
   --medium: rgba(81, 78, 166, 1);
   --light: rgba(119, 125, 242, 1);
@@ -140,7 +140,7 @@ button:hover {
   visibility: hidden;
   margin: 0; 
   width: 100px;
-  background-color:var(--dark);
+  background-color:rgba(48, 29, 89, 0.65);
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
